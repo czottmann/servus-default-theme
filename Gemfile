@@ -1,4 +1,9 @@
-source "https://rubygems.org"
+source :rubygems
 
-gem "haml", "~> 3.1.0"
-gem "sass", "~> 3.1.5"
+gem "rack"
+gem "rack-rewrite", "~> 1.2.1"
+
+group :development do
+  gem "haml", "~> 3.1.0", :require => :false
+  gem "sass", "~> 3.1.5", :require => :false
+end

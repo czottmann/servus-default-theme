@@ -1,7 +1,9 @@
 GEM
-  remote: https://rubygems.org/
+  remote: http://rubygems.org/
   specs:
     haml (3.1.6)
+    rack (1.4.1)
+    rack-rewrite (1.2.1)
     sass (3.1.20)
 
 PLATFORMS
@@ -9,4 +11,6 @@ PLATFORMS
 
 DEPENDENCIES
   haml (~> 3.1.0)
+  rack
+  rack-rewrite (~> 1.2.1)
   sass (~> 3.1.5)
