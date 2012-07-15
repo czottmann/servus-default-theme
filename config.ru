@@ -5,6 +5,6 @@ use Rack::Rewrite do
 end
 
 use Rack::Deflater
-use Rack::Static, :urls => [/./], :root => "public", :index => "index.html"
+use Rack::Static, :urls => [/./], :root => "assets", :index => "index.html"
 
 run Proc
