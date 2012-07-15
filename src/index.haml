@@ -11,12 +11,12 @@
     :javascript
       if ( top !== self ) { top.location = self.location.href; }
 
-    %link{ :rel => "stylesheet", :type => "text/css", :href => "foundation.css" }
-    %link{ :rel => "stylesheet", :type => "text/css", :href => "droplings.css" }
-    %link{ :rel => "stylesheet", :type => "text/css", :href => "http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:700" }
-    %link{ :rel => "stylesheet", :type => "text/css", :href => "font-awesome.css" }
+    %link{ :rel => "stylesheet", :type => "text/css", :href => "//assets.drpln.gs/1/foundation.css" }
+    %link{ :rel => "stylesheet", :type => "text/css", :href => "//assets.drpln.gs/1/droplings.css" }
+    %link{ :rel => "stylesheet", :type => "text/css", :href => "//assets.drpln.gs/1/font-awesome.css" }
     /[if IE 7 ]
-      %link{ :rel => "stylesheet", :type => "text/css", :href => "font-awesome-ie7.css" }
+      %link{ :rel => "stylesheet", :type => "text/css", :href => "//assets.drpln.gs/1/font-awesome-ie7.css" }
+    %link{ :rel => "stylesheet", :type => "text/css", :href => "//fonts.googleapis.com/css?family=Yanone+Kaffeesatz:700" }
 
   %body
     #header-bar
@@ -30,44 +30,46 @@
     #main-content
       #download
         .row
-          #icon-column.six.columns.hide-for-small
-            {{#is_message}}
-            %i.icon-mail
-            {{/is_message}}
+          #icon-column.five.columns.offset-by-one.hide-for-small
+            %p
+              {{#is_message}}
+              %i.icon-mail
+              {{/is_message}}
 
-            {{#is_contact}}
-            %i.icon-user
-            {{/is_contact}}
+              {{#is_contact}}
+              %i.icon-user
+              {{/is_contact}}
 
-            {{#is_archive}}
-            %i.icon-folder-close
-            {{/is_archive}}
+              {{#is_archive}}
+              %i.icon-folder-close
+              {{/is_archive}}
 
-            {{#is_text}}
-            %i.icon-align-left
-            {{/is_text}}
+              {{#is_text}}
+              %i.icon-align-left
+              {{/is_text}}
 
-            {{#is_pdf}}
-            %i.icon-book
-            {{/is_pdf}}
+              {{#is_pdf}}
+              %i.icon-book
+              {{/is_pdf}}
 
-            {{#is_image}}
-            %i.icon-picture
-            {{/is_image}}
+              {{#is_image}}
+              / %i.icon-picture
+              %img{ :src => "{{file_link}}", :title => "{{original_filename}}" }
+              {{/is_image}}
 
-            {{#is_video}}
-            %i.icon-video
-            {{/is_video}}
+              {{#is_video}}
+              %i.icon-video
+              {{/is_video}}
 
-            {{#is_audio}}
-            %i.icon-headphones
-            {{/is_audio}}
+              {{#is_audio}}
+              %i.icon-headphones
+              {{/is_audio}}
 
-            {{#is_unknown_type}}
-            %i.icon-paper-clip
-            {{/is_unknown_type}}
+              {{#is_unknown_type}}
+              %i.icon-paper-clip
+              {{/is_unknown_type}}
 
-          #file-column.six.columns
+          #file-column.five.columns.end
             %p
               {{original_filename}}
 
