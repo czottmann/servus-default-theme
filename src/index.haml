@@ -1,0 +1,102 @@
+!!! 5
+%html
+  %head
+    %meta{ :charset => "utf-8" }
+    %meta{ :"http-equiv" => "X-UA-Compatible", :content => "IE=edge,chrome=1" }
+    %meta{ :"http-equiv" => "Content-Type", :content => "text/html" }
+    %meta{ :name => "viewport", :content => "width=device-width" }
+
+    %title {{original_filename}} (Shared with Droplings for Mac.)
+
+    :javascript
+      if ( top !== self ) { top.location = self.location.href; }
+
+    %link{ :rel => "stylesheet", :type => "text/css", :href => "foundation.css" }
+    %link{ :rel => "stylesheet", :type => "text/css", :href => "droplings.css" }
+    %link{ :rel => "stylesheet", :type => "text/css", :href => "http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:700" }
+    %link{ :rel => "stylesheet", :type => "text/css", :href => "font-awesome.css" }
+    /[if IE 7 ]
+      %link{ :rel => "stylesheet", :type => "text/css", :href => "font-awesome-ie7.css" }
+
+  %body
+    #header-bar
+      .row
+        .twelve.columns
+          %p
+            %a{ :href => "{{short_url}}" }
+              %i.icon-link
+              Short URL
+
+    #main-content
+      #download
+        .row
+          #icon-column.six.columns.hide-for-small
+            {{#is_message}}
+            %i.icon-mail
+            {{/is_message}}
+
+            {{#is_contact}}
+            %i.icon-user
+            {{/is_contact}}
+
+            {{#is_archive}}
+            %i.icon-folder-close
+            {{/is_archive}}
+
+            {{#is_text}}
+            %i.icon-align-left
+            {{/is_text}}
+
+            {{#is_pdf}}
+            %i.icon-book
+            {{/is_pdf}}
+
+            {{#is_image}}
+            %i.icon-picture
+            {{/is_image}}
+
+            {{#is_video}}
+            %i.icon-video
+            {{/is_video}}
+
+            {{#is_audio}}
+            %i.icon-headphones
+            {{/is_audio}}
+
+            {{#is_unknown_type}}
+            %i.icon-paper-clip
+            {{/is_unknown_type}}
+
+          #file-column.six.columns
+            %p
+              {{original_filename}}
+
+        #download-row.row
+          .twelve.columns
+            %p
+              %a.secondary.button{ :href => "{{file_link}}" }
+                %i.icon-download
+                Download / Direct Link
+
+    #footer-bar
+      .row
+        .twelve.columns
+          %p
+            Powered by
+            %a{ :href => "http://droplings.com/", :target => "_blank" }
+              %i.icon-tint
+              Droplings.
+            %br.show-for-small
+            Mac + Dropbox + Custom Themes =
+            %i.icon-heart{ :title => "Love" }
+
+  :javascript
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-3142618-10']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();

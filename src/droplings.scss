@@ -1,0 +1,111 @@
+@mixin border-radius($radius) {
+  -moz-border-radius: $radius;
+  -khtml-border-radius: $radius;
+  -ms-border-radius: $radius;
+  -o-border-radius: $radius;
+  -webkit-border-radius: $radius;
+  border-radius: $radius;
+}
+
+
+@mixin box-shadow($shdw1,$shdw2) {
+  -moz-box-shadow: $shdw1,$shdw2;
+  -o-box-shadow: $shdw1,$shdw2;
+  -webkit-box-shadow: $shdw1,$shdw2;
+  box-shadow: $shdw1,$shdw2;
+}
+
+
+html, body {
+  background-color: #e8eaf0;
+  height: 100%;
+}
+
+body {
+  background: url(./extra_clean_paper.jpg);
+  text-shadow: 1px 1px 1px #fff;
+}
+
+#header-bar,
+#footer-bar {
+  background-color: #eee;
+  padding: 5px 0;
+  text-align: center;
+  width: 100%;
+
+  p {
+    margin: 0;
+  }
+}
+
+#header-bar {
+  border-bottom: 1px solid #ddd;
+}
+
+#footer-bar {
+  border-top: 1px solid #ddd;
+  bottom: 0;
+  position: absolute;
+}
+
+#main-content {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+
+  #download {
+    position: absolute;
+    top: -110px;
+    width: 100%;
+
+    #icon-column {
+      font-family: "Yanone Kaffeesatz", sans-serif;
+      font-size: 150px;
+      font-weight: 700;
+      line-height: 1;
+      text-align: right;
+    }
+
+    #file-column {
+      p {
+        font-family: "Yanone Kaffeesatz", sans-serif;
+        font-size: 50px;
+        font-weight: 700;
+        line-height: 1;
+      }
+    }
+
+    #download-row {
+      text-align: center;
+
+      a {
+        @include border-radius(20px);
+        @include box-shadow( 0 1px 3px rgba(0,0,0,0.28),inset 0 1px #fff );
+        background-image: -moz-gradient(linear, 60% 0%, 60% 100%, color-stop(0%, transparent), color-stop(100%, rgba(0, 0, 0, 0.1))) #EEF3F6;
+        background: -webkit-gradient(linear, 60% 0%, 60% 100%, color-stop(0%, transparent), color-stop(100%, rgba(0, 0, 0, 0.1))) #EEF3F6;
+        font-weight: normal;
+        height: 40px;
+        line-height: 40px;
+        padding: 0 22px;
+
+        &:hover {
+          background: -webkit-gradient(linear, 60% 0%, 60% 100%, color-stop(0%, transparent), color-stop(100%, rgba(0, 0, 0, 0.1))) #fff;
+        }
+
+        i {
+          font-size: 150%;
+          vertical-align: top;
+        }
+      }
+    }
+  }
+}
+
+
+@media only screen and (max-width: 767px) {
+  #file-column {
+    p {
+      text-align: center;
+    }
+  }
+}
