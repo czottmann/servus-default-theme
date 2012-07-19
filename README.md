@@ -6,9 +6,9 @@ This repository contains the most recent version of Droplings' built-in default 
 
 Please note that this repository contains _everything_ related to the default theme:
 
-  1. the theme's [actual `index.html`](index-html)
+  1. the theme's [actual `index.html`][index-html]
   2. the theme's supporting [asset files][assets] (CSS, images etc.)
-  3. the [Heroku][heroku]-related code running the built-in theme's supporting assets server `assets.drpln.gs`
+  3. the [Heroku][heroku]-related code running the built-in theme's supporting assets server `assets.drpln.gs
 
 If you're only interested in seeing the themeing example serving as the default theme, number (1) on the above list is all that you need.
 
@@ -109,16 +109,15 @@ The default theme's background image is [Clean Gray Paper][clean-gray-paper] by 
 
 
 
-
-[droplings]: http://droplings.com
-[dropbox]: http://db.tt/T84kkEv
-[index-html]: https://github.com/carlo/droplings-default-theme/blob/master/build/index.html
 [assets]: https://github.com/carlo/droplings-default-theme/tree/master/assets
-[heroku]: http://heroku.com
+[dropbox]: http://db.tt/T84kkEv
+[droplings]: http://droplings.com
 [font-awesome]: http://fortawesome.github.com/Font-Awesome/
-[license-cc-by-30]: http://creativecommons.org/licenses/by/3.0/
+[heroku]: http://heroku.com
+[index-html]: https://github.com/carlo/droplings-default-theme/blob/master/build/index.html
 [kaffeesatz]: http://www.google.com/webfonts/specimen/Yanone+Kaffeesatz
+[license-cc-by-30]: http://creativecommons.org/licenses/by/3.0/
 [license-sil]: http://scripts.sil.org/OFL
+[livereload]: http://livereload.com/
 [mustache]: http://mustache.github.com/
 [zurb-foundation]: https://github.com/zurb/foundation
-[livereload]: http://livereload.com/
