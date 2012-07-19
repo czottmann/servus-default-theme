@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8' />
+    <meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible' />
+    <meta content='text/html' http-equiv='Content-Type' />
+    <meta content='width=device-width' name='viewport' />
+    <title>{{original_filename}} (Shared with Droplings for Mac.)</title>
+    <script type='text/javascript'>
+      //<![CDATA[
+        if ( top !== self ) { top.location = self.location.href; }
+      //]]>
+    </script>
+    <link href='//assets.drpln.gs/1/foundation.css' rel='stylesheet' type='text/css' />
+    <link href='//assets.drpln.gs/1/droplings.css' rel='stylesheet' type='text/css' />
+    <link href='//assets.drpln.gs/1/font-awesome.css' rel='stylesheet' type='text/css' />
+    <!--[if IE 7 ]>
+      <link href='//assets.drpln.gs/1/font-awesome-ie7.css' rel='stylesheet' type='text/css' />
+    <![endif]-->
+    <link href='//fonts.googleapis.com/css?family=Yanone+Kaffeesatz:700' rel='stylesheet' type='text/css' />
+  </head>
+  <body>
+    <div id='header-bar'>
+      <div class='row'>
+        <div class='twelve columns'>
+          <p>
+            <a href='{{short_url}}'>
+              <i class='icon-link'></i>
+              Short URL
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div id='main-content'>
+      <div id='download'>
+        <div class='row'>
+          <div class='five columns offset-by-one hide-for-small' id='icon-column'>
+            <p>
+              {{#is_message}}
+              <i class='icon-mail'></i>
+              {{/is_message}}
+              {{#is_contact}}
+              <i class='icon-user'></i>
+              {{/is_contact}}
+              {{#is_archive}}
+              <i class='icon-folder-close'></i>
+              {{/is_archive}}
+              {{#is_text}}
+              <i class='icon-align-left'></i>
+              {{/is_text}}
+              {{#is_pdf}}
+              <i class='icon-book'></i>
+              {{/is_pdf}}
+              {{#is_image}}
+              <!-- %i.icon-picture -->
+              <img src='{{file_link}}' title='{{original_filename}}' />
+              {{/is_image}}
+              {{#is_video}}
+              <i class='icon-video'></i>
+              {{/is_video}}
+              {{#is_audio}}
+              <i class='icon-headphones'></i>
+              {{/is_audio}}
+              {{#is_unknown_type}}
+              <i class='icon-paper-clip'></i>
+              {{/is_unknown_type}}
+            </p>
+          </div>
+          <div class='five columns end' id='file-column'>
+            <p>
+              {{original_filename}}
+            </p>
+          </div>
+        </div>
+        <div class='row' id='download-row'>
+          <div class='twelve columns'>
+            <p>
+              <a class='secondary button' href='{{file_link}}'>
+                <i class='icon-download'></i>
+                Download / Direct Link
+                <span class='file-size'>
+                  &middot; ({{file_size}})
+                </span>
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id='footer-bar'>
+      <div class='row'>
+        <div class='twelve columns'>
+          <p>
+            Powered by
+            <a href='http://droplings.com/' target='_blank'>
+              <i class='icon-tint'></i>
+              Droplings.
+            </a>
+            <br class='show-for-small' />
+            Mac + Dropbox + Custom Themes =
+            <i class='icon-heart' title='Love'></i>
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script type='text/javascript'>
+    //<![CDATA[
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-3142618-10']);
+      _gaq.push(['_trackPageview']);
+      
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    //]]>
+  </script>
+</html>
