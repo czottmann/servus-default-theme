@@ -14,7 +14,7 @@ If you're only interested in seeing the themeing example serving as the default 
 
 For starters, here's a screenshot of the default theme in action.
 
-![Screenshot of Droplings default theme (v1.0)](screenshot-v1.0.jpg)
+![Screenshot of Droplings default theme (v1.0)](https://github.com/carlo/droplings-default-theme/raw/master/screenshot-v1.0.jpg)
 
 
 ## Templating Engine
