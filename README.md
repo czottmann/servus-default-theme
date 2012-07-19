@@ -6,7 +6,7 @@ This repository contains the most recent version of Droplings' built-in default 
 
 Please note that this repository contains _everything_ related to the default theme:
 
-  1. the theme's [actual `index.html`][index-html]
+  1. the theme's [`index.html`][index-html]
   2. the theme's supporting [asset files][assets] (CSS, images etc.)
   3. the [Heroku][heroku]-related code running the built-in theme's supporting assets server `assets.drpln.gs
 
