@@ -8,7 +8,7 @@ Please note that this repository contains _everything_ related to the default th
 
   1. the theme's [actual `index.html`](index-html)
   2. the theme's supporting [asset files][assets] (CSS, images etc.)
-  3. the [Heroku][heroku]-related code running the built-in theme's supporting assets server assets.drpln.gs
+  3. the [Heroku][heroku]-related code running the built-in theme's supporting assets server `assets.drpln.gs`
 
 If you're only interested in seeing the themeing example serving as the default theme, number (1) on the above list is all that you need.
 
@@ -64,9 +64,9 @@ Here's a list of available template keys/variables with their meaning.
     is a GIF then the placeholder `is_ext_gif` would be set.
 
 
-## Build Notices
+## Build Notes
 
-For the time being, the HAML/SASS source files residing in `src/` are compiled to HTML and CSS (created in `build/` and `assets/`, respectively) by [LiveReload][livereload].
+For the time being, my "master files" are the HAML/SASS source files residing in `src/`.  These are compiled to HTML/CSS (created in `build/` and `assets/`, respectively) by [LiveReload][livereload].
 
 
 ## Licenses
