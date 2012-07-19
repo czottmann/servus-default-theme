@@ -15,12 +15,9 @@
 }
 
 @mixin bg-gradient( $from, $to ) {
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = '$from', endColorstr = '$to');
-  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr = '$from', endColorstr = '$to')";
   background-image: -moz-linear-gradient(top, $from, $to);
   background-image: -ms-linear-gradient(top, $from, $to);
   background-image: -o-linear-gradient(top, $from, $to);
-  background-image: -webkit-gradient(linear, center top, center bottom, from($from), to($to));
   background-image: -webkit-linear-gradient(top, $from, $to);
   background-image: linear-gradient(top, $from, $to);
 }
