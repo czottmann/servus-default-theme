@@ -26,7 +26,7 @@ Droplings is making use of [Mustache][mustache], a well-known logic-less templat
 
 The templating process goes like this:
 
-  1. All non-`.html` files will be copied verbatim to the target folder.
+  1. All non-`.html` files will be copied verbatim to the target folder (`~/Dropbox/Public/share/YYYY-MM/…/`).
   2. All `.html` will be run through the templating engine, the resulting files will be written to the target folder (using their original names, i.e. an `index.html` with placeholders in your theme folder will result in an `index.html` filled with live data in the target folder).
   3. The shared file will be copied to a `f` subfolder in the target directory; its name will be normalized a bit.
   
@@ -66,7 +66,7 @@ Here's a list of available template keys/variables with their meaning.
 
 ## Build Notices
 
-For the time being, the source files are written in HAML and SASS which are then compiled to HTML and CSS, respectively, by [LiveReload][livereload].
+For the time being, the HAML/SASS source files residing in `src/` are compiled to HTML and CSS (created in `build/` and `assets/`, respectively) by [LiveReload][livereload].
 
 
 ## Licenses
