@@ -38,7 +38,7 @@
           <div class='five columns offset-by-one hide-for-small' id='icon-column'>
             <p>
               {{#is_message}}
-              <i class='icon-mail'></i>
+              <i class='icon-comments'></i>
               {{/is_message}}
               {{#is_contact}}
               <i class='icon-user'></i>
@@ -57,7 +57,7 @@
               <img src='{{file_link}}' title='{{original_filename}}' />
               {{/is_image}}
               {{#is_video}}
-              <i class='icon-video'></i>
+              <i class='icon-film'></i>
               {{/is_video}}
               {{#is_audio}}
               <i class='icon-headphones'></i>
@@ -110,7 +110,7 @@
       var _gaq = _gaq || [];
       _gaq.push(['_setAccount', 'UA-3142618-10']);
       _gaq.push(['_trackPageview']);
-      
+
       (function() {
         var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
         ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
