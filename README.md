@@ -69,9 +69,11 @@ Here's a list of available template keys/variables with their meaning.
 For the time being, my "master files" are the HAML/SASS source files residing in `src/`.  These are compiled to HTML/CSS (created in `build/` and `assets/`, respectively) by [LiveReload][livereload].
 
 
-## Licenses
+## Legal
 
-3rd party libraries and code (listed below) expressively excluded, the Droplings default theme is licensed under the WTFPL v2.
+The Droplings Default Theme are copyright © 2012 Carlo Zottmann, [municode.de](http://municode.de/), carlo@municode.de.
+
+3rd party libraries and code (listed below) expressively excluded, the Droplings Default Theme (this here repository) is licensed under the WTFPL v2.
 
                DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
                        Version 2, December 2004
@@ -121,3 +123,5 @@ The default theme's background image is [Clean Gray Paper][clean-gray-paper] by 
 [livereload]: http://livereload.com/
 [mustache]: http://mustache.github.com/
 [zurb-foundation]: https://github.com/zurb/foundation
+[subtle-patterns]: http://subtlepatterns.com/
+[clean-gray-paper]: http://subtlepatterns.com/clean-gray-paper/
