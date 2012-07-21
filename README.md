@@ -125,3 +125,4 @@ The default theme's background image is [Clean Gray Paper][clean-gray-paper] by 
 [zurb-foundation]: https://github.com/zurb/foundation
 [subtle-patterns]: http://subtlepatterns.com/
 [clean-gray-paper]: http://subtlepatterns.com/clean-gray-paper/
+
