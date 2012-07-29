@@ -8,7 +8,7 @@ Please note that this repository contains _everything_ related to the default th
 
   1. the theme's [`index.html`][index-html]
   2. the theme's supporting [asset files][assets] (CSS, images etc.)
-  3. the [Heroku][heroku]-related code running the built-in theme's supporting assets server `assets.drpln.gs
+  3. the [Heroku][heroku]-related code running the built-in theme's supporting assets server `assets.drpln.gs`
 
 If you're only interested in seeing the themeing example serving as the default theme, number (1) on the above list is all that you need.
 
