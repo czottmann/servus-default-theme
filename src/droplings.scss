@@ -93,7 +93,6 @@ body {
         font-weight: 700;
         line-height: 1;
         word-wrap: break-word;
-
       }
     }
 
@@ -124,9 +123,39 @@ body {
 
 
 @media only screen and (max-width: 767px) {
-  #file-column {
-    p {
-      text-align: center;
+
+  p {
+   font-size: 9px;
+  }
+
+  #header-bar,
+  #footer-bar {
+    padding: 2px 0;
+  }
+
+  #main-content {
+    #download {
+      top: -42px;
+
+      #download-row {
+        a {
+          @include border-radius(15px);
+          font-size: 9px;
+          height: 30px;
+          line-height: 30px;
+
+          .file-size {
+            font-size: 8px;
+          }
+        }
+      }
+    }
+
+    #file-column {
+      p {
+        font-size: 20px !important;
+        text-align: center;
+      }
     }
   }
 }
