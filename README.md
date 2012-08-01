@@ -2,8 +2,7 @@
 
 [Droplings](droplings) is a Mac app to make quick-fire sharing via your [Dropbox account][dropbox] easier and more comfortable.  Its preferences allow you to specify a custom theme for rendering your shared files' preview pages.
 
-This repository contains the most recent version of Droplings' built-in default theme.  Feel free to fork and build your own custom themes to make your shared preview pages more personal.  
-**If you're looking for a quicker way to get started, you'll probably want
+This repository contains the most recent version of Droplings' built-in default theme.  Feel free to fork and build your own custom themes to make your shared preview pages more personal.  **If you're looking for a quicker way to get started, you'll probably want
 [droplings-theme-boilerplate][boilerplate-github] instead.**
 
 Please note that this repository contains _everything_ related to the default theme:
