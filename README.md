@@ -1,9 +1,9 @@
-# Droplings: Default Theme v1.0
+# Landinger: Default Theme v1.0
 
-[Droplings](droplings) is a Mac app to make quick-fire sharing via your [Dropbox account][dropbox] easier and more comfortable.  Its preferences allow you to specify a custom theme for rendering your shared files' preview pages.
+[Landinger](landinger) is a Mac app to make quick-fire sharing via your [Dropbox account][dropbox] easier and more comfortable.  Its preferences allow you to specify a custom theme for rendering your shared files' preview pages.
 
-This repository contains the most recent version of Droplings' built-in default theme.  Feel free to fork and build your own custom themes to make your shared preview pages more personal.  **If you're looking for a quicker way to get started, you'll probably want
-[droplings-theme-boilerplate][boilerplate-github] instead.**
+This repository contains the most recent version of Landinger' built-in default theme.  Feel free to fork and build your own custom themes to make your shared preview pages more personal.  **If you're looking for a quicker way to get started, you'll probably want
+[landinger-theme-boilerplate][boilerplate-github] instead.**
 
 Please note that this repository contains _everything_ related to the default theme:
 
@@ -15,12 +15,12 @@ If you're only interested in seeing the themeing example serving as the default 
 
 For starters, here's a screenshot of the default theme in action.
 
-![Screenshot of Droplings default theme (v1.0)](https://github.com/carlo/landinger-default-theme/raw/master/screenshot-v1.0.jpg)
+![Screenshot of Landinger default theme (v1.0)](https://github.com/carlo/landinger-default-theme/raw/master/screenshot-v1.0.jpg)
 
 
 ## Templating Engine
 
-Droplings is making use of [Mustache][mustache], a well-known logic-less templating engine.  You can find all you need to know about its syntax on the [Mustache website][mustache].
+Landinger is making use of [Mustache][mustache], a well-known logic-less templating engine.  You can find all you need to know about its syntax on the [Mustache website][mustache].
 
 
 ## Theme Workflow
@@ -34,7 +34,7 @@ The templating process goes like this:
 A few notes:
 
   - Your theme **must** contain an `index.html`.
-  - Droplings will ignore subfolders.  Only files in the root folder of your theme are recognized.
+  - Landinger will ignore subfolders.  Only files in the root folder of your theme are recognized.
   - The default theme only contains one HTML and no JS file.  There's no reason why your theme can't sport more than one HTML file and/or JS files.  The templating engine won't replace keys in JS files, tho, so if you want to set JS variables, do so in a `<script>` block in the HTML file prior to loading your external JS file.
  
    
@@ -72,9 +72,9 @@ For the time being, my "master files" are the HAML/SASS source files residing in
 
 ## Legal
 
-The Droplings Default Theme are copyright © 2012 Carlo Zottmann, [municode.de](http://municode.de/), carlo@municode.de.
+The Landinger Default Theme are copyright © 2012 Carlo Zottmann, [municode.de](http://municode.de/), carlo@municode.de.
 
-3rd party libraries and code (listed below) expressively excluded, the Droplings Default Theme (this here repository) is licensed under the WTFPL v2.
+3rd party libraries and code (listed below) expressively excluded, the Landinger Default Theme (this here repository) is licensed under the WTFPL v2.
 
                DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
                        Version 2, December 2004
@@ -93,12 +93,12 @@ The Droplings Default Theme are copyright © 2012 Carlo Zottmann, [municode.de](
 
 ### Font: Font Awesome
 
-Droplings default theme is using the rather nice glyphs of [Font Awesome][font-awesome].  Copyright (C) 2012 by Dave Gandy, released under a [CC BY 3.0][license-cc-by-30] license.
+Landinger default theme is using the rather nice glyphs of [Font Awesome][font-awesome].  Copyright (C) 2012 by Dave Gandy, released under a [CC BY 3.0][license-cc-by-30] license.
 
 
 ### Font: Yanone Kaffeesatz
 
-Droplings main display font is [Yanone Kaffeesatz][kaffeesatz], released under the [SIL Open Font License v1.1][license-sil].
+Landinger main display font is [Yanone Kaffeesatz][kaffeesatz], released under the [SIL Open Font License v1.1][license-sil].
 
 
 ### Basic CSS: ZURB Foundation 3.0
@@ -113,9 +113,9 @@ The default theme's background image is [Clean Gray Paper][clean-gray-paper] by 
 
 
 [assets]: https://github.com/carlo/landinger-default-theme/tree/master/assets
-[boilerplate-github]: https://github.com/carlo/droplings-theme-boilerplate
+[boilerplate-github]: https://github.com/carlo/landinger-theme-boilerplate
 [dropbox]: http://db.tt/T84kkEv
-[droplings]: http://droplings.com
+[landinger]: http://landingerapp.com
 [font-awesome]: http://fortawesome.github.com/Font-Awesome/
 [heroku]: http://heroku.com
 [index-html]: https://github.com/carlo/landinger-default-theme/blob/master/build/index.html

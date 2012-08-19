@@ -2,7 +2,7 @@ require "rack/rewrite"
 require "rack/contrib/response_headers"
 
 use Rack::Rewrite do
-  r301 "/", "http://droplings.com"
+  r301 "/", "http://landingerapp.com"
 end
 
 use Rack::ResponseHeaders do |headers|
