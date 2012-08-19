@@ -9,13 +9,13 @@ Please note that this repository contains _everything_ related to the default th
 
   1. the theme's [`index.html`][index-html]
   2. the theme's supporting [asset files][assets] (CSS, images etc.)
-  3. the [Heroku][heroku]-related code running the built-in theme's supporting assets server `assets.drpln.gs`
+  3. the [Heroku][heroku]-related code running the built-in theme's supporting assets server `assets.landingerapp.com`
 
 If you're only interested in seeing the themeing example serving as the default theme, number (1) on the above list is all that you need.
 
 For starters, here's a screenshot of the default theme in action.
 
-![Screenshot of Droplings default theme (v1.0)](https://github.com/carlo/droplings-default-theme/raw/master/screenshot-v1.0.jpg)
+![Screenshot of Droplings default theme (v1.0)](https://github.com/carlo/landinger-default-theme/raw/master/screenshot-v1.0.jpg)
 
 
 ## Templating Engine
@@ -48,7 +48,7 @@ Here's a list of available template keys/variables with their meaning.
   - `file_ext`: the normalized file extension (trimmed & lowercase).
   - `file_size`: the file size in readable format, eg. "2.70 KB", 
     "5.12 GB".
-  - `short_url`: the drpln.gs URL leading to the preview page.
+  - `short_url`: the landingerapp.com URL leading to the preview page.
   - `original_filename`: The name of the file as it was when the file was
     shared.
   - `is_archive`: the file is an archive (zip, tgz, rar etc.)
@@ -112,13 +112,13 @@ The default theme's background image is [Clean Gray Paper][clean-gray-paper] by 
 
 
 
-[assets]: https://github.com/carlo/droplings-default-theme/tree/master/assets
+[assets]: https://github.com/carlo/landinger-default-theme/tree/master/assets
 [boilerplate-github]: https://github.com/carlo/droplings-theme-boilerplate
 [dropbox]: http://db.tt/T84kkEv
 [droplings]: http://droplings.com
 [font-awesome]: http://fortawesome.github.com/Font-Awesome/
 [heroku]: http://heroku.com
-[index-html]: https://github.com/carlo/droplings-default-theme/blob/master/build/index.html
+[index-html]: https://github.com/carlo/landinger-default-theme/blob/master/build/index.html
 [kaffeesatz]: http://www.google.com/webfonts/specimen/Yanone+Kaffeesatz
 [license-cc-by-30]: http://creativecommons.org/licenses/by/3.0/
 [license-sil]: http://scripts.sil.org/OFL
