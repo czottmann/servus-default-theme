@@ -1,4 +1,4 @@
-# Landinger: Default Theme v1.0
+# Landinger: Default Theme v1.1
 
 [Landinger](landinger) is a Mac app to make quick-fire sharing via your [Dropbox account][dropbox] easier and more comfortable.  Its preferences allow you to specify a custom theme for rendering your shared files' preview pages.
 
