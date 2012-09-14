@@ -19,14 +19,6 @@
     %link{ :rel => "stylesheet", :type => "text/css", :href => "https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:700" }
 
   %body
-    #header-bar
-      .row
-        .twelve.columns
-          %p
-            %a{ :href => "{{short_url}}" }
-              %i.icon-link
-              Short URL
-
     #main-content
       #download
         .row
@@ -87,12 +79,11 @@
         .twelve.columns
           %p
             Powered by
-            %a{ :href => "http://servus.io/", :target => "_blank" }
-              %i.icon-tint
-              Servus.
+            %a{ :href => "https://servus.io/", :target => "_blank" }
+              Servus for Mac.
             %br.show-for-small
-            Mac + Dropbox + Custom Themes =
-            %i.icon-heart{ :title => "Love" }
+            %span
+              Turn any file on your computer into a branded download page hosted on Dropbox.
 
     :javascript
       var _gaq = _gaq || [];
