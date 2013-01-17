@@ -10,6 +10,11 @@
 
     :javascript
       if ( top !== self ) { top.location = self.location.href; }
+      var S = {
+        pageTitle: "",
+        pageLink: document.location.href,
+        fileLink: "{{file_link}}"
+      };
 
     %link{ :rel => "stylesheet", :type => "text/css", :href => "https://assets.servus.io/3/bootstrap.min.css" }
     %link{ :rel => "stylesheet", :type => "text/css", :href => "https://assets.servus.io/3/servus.css" }
@@ -79,15 +84,15 @@
         %i.icon-share
       %ul.dropdown-menu.pull-right
         %li
-          %a{ :href => "https://twitter.com/intent/tweet?original_referer=&text=TEXT&url=https%3A%2F%2Ftwitter.com%2Fabout%2Fresources%2Fbuttons%23tw&via=servusio" }
+          %a.share-twitter{ :href => "#", :target => "_blank" }
             %i.icon-twitter
             Twitter
         %li
-          %a{ :href => "#" }
+          %a.share-facebook{ :href => "#", :target => "_blank" }
             %i.icon-facebook
             Facebook
         %li
-          %a{ :href => "#" }
+          %a.share-gplus{ :href => "#", :target => "_blank" }
             %i.icon-google-plus
             Google+
 

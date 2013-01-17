@@ -56,4 +56,12 @@ body {
   bottom: 20px;
   position: fixed;
   right: 20px;
+
+  .dropdown-menu {
+    min-width: 110px;
+
+    li>a {
+      padding: 3px 10px;
+    }
+  }
 }

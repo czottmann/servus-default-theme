@@ -9,6 +9,11 @@
 <script>
   //<![CDATA[
     if ( top !== self ) { top.location = self.location.href; }
+    var S = {
+      pageTitle: "",
+      pageLink: document.location.href,
+      fileLink: "{{file_link}}"
+    };
   //]]>
 </script>
 <link href="https://assets.servus.io/3/bootstrap.min.css" rel="stylesheet" type="text/css">
@@ -78,19 +83,19 @@ Download / Direct Link
 </button>
 <ul class="dropdown-menu pull-right">
 <li>
-<a href="https://twitter.com/intent/tweet?original_referer=&amp;text=TEXT&amp;url=https%3A%2F%2Ftwitter.com%2Fabout%2Fresources%2Fbuttons%23tw&amp;via=servusio">
+<a class="share-twitter" href="#" target="_blank">
 <i class="icon-twitter"></i>
 Twitter
 </a>
 </li>
 <li>
-<a href="#">
+<a class="share-facebook" href="#" target="_blank">
 <i class="icon-facebook"></i>
 Facebook
 </a>
 </li>
 <li>
-<a href="#">
+<a class="share-gplus" href="#" target="_blank">
 <i class="icon-google-plus"></i>
 Google+
 </a>
