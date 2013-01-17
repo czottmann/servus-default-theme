@@ -11,14 +11,6 @@ $(".popover-content p.file-icon img").on( "load", function() {
   $(window).trigger("resize");
 });
 
-$("#sharing")
-  .on( "mouseenter", function() {
-    $(".powered-by").addClass("shown");
-  })
-  .off( "mouseleave", function() {
-    $(".powered-by").removeClass("shown");
-  });
-
 
 $(document).ready( function() {
   S.pageTitle = $(".popover-title").text();
