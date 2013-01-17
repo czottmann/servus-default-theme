@@ -15,6 +15,7 @@ body {
 }
 
 #main-content {
+  @include transition( padding-top 0.3s );
   text-align: center;
 }
 
@@ -65,7 +66,7 @@ body {
   right: 20px;
 
   .powered-by {
-    @include transition( opacity 0.3s linear 0.5s);
+    @include transition( opacity 0.3s linear 0.3s);
     margin-right: 10px;
     opacity: 0.0;
     text-shadow: 1px 1px 2px #fff;
@@ -81,7 +82,7 @@ body {
 
   &:hover {
     .powered-by {
-      @include transition( opacity 0.3s linear 0.5s);
+      @include transition( opacity 0.3s linear 0.3s);
       opacity: 0.5;
     }
   }
