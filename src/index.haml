@@ -79,22 +79,26 @@
               Download / Direct Link
 
 
-    #sharing.btn-group.dropup
-      %button.btn.dropdown-toggle{ :"data-toggle" => "dropdown", :title => "Share this page" }
-        %i.icon-share
-      %ul.dropdown-menu.pull-right
-        %li
-          %a.share-twitter{ :href => "#", :target => "_blank" }
-            %i.icon-twitter
-            Twitter
-        %li
-          %a.share-facebook{ :href => "#", :target => "_blank" }
-            %i.icon-facebook
-            Facebook
-        %li
-          %a.share-gplus{ :href => "#", :target => "_blank" }
-            %i.icon-google-plus
-            Google+
+    #sharing
+      %span.powered-by
+        Shared using
+        %a{ :href => "https://servus.io/" } Servus for Mac.
+      .btn-group.dropup
+        %button.btn.dropdown-toggle{ :"data-toggle" => "dropdown", :title => "Share this page" }
+          %i.icon-share
+        %ul.dropdown-menu.pull-right
+          %li
+            %a.share-twitter{ :href => "#", :target => "_blank" }
+              %i.icon-twitter
+              Twitter
+          %li
+            %a.share-facebook{ :href => "#", :target => "_blank" }
+              %i.icon-facebook
+              Facebook
+          %li
+            %a.share-gplus{ :href => "#", :target => "_blank" }
+              %i.icon-google-plus
+              Google+
 
 
     %script{ :src => "https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js" }
@@ -106,4 +110,7 @@
   Turn any file on your computer into a branded download page hosted on Dropbox.
 
   Servus' default theme uses
-  \- Font Awesome by Dave Gandy - http://fortawesome.github.com/Font-Awesome
+  \- Bootstrap by Twitter: http://twitter.github.com/bootstrap/
+  \- Font Awesome by Dave Gandy: http://fortawesome.github.com/Font-Awesome
+  \- Arimo by Steve Matteson: http://www.google.com/webfonts/specimen/Arimo
+  \- jQuery http://jquery.com/
