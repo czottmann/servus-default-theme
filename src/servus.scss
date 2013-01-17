@@ -65,3 +65,19 @@ body {
     }
   }
 }
+
+
+@media (max-width: 320px) {
+  #download-details {
+    width: 236px;
+
+    .popover-content {
+      p.file-icon {
+        img {
+          max-height: 208px;
+          max-width: 208px;
+        }
+      }
+    }
+  }
+}
