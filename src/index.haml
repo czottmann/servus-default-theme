@@ -10,77 +10,100 @@
 
     :javascript
       if ( top !== self ) { top.location = self.location.href; }
+      var S = {
+        pageTitle: "",
+        pageLink: document.location.href,
+        fileLink: "{{file_link}}"
+      };
 
-    %link{ :rel => "stylesheet", :type => "text/css", :href => "https://assets.servus.io/2/foundation.css" }
-    %link{ :rel => "stylesheet", :type => "text/css", :href => "https://assets.servus.io/2/servus.css" }
-    %link{ :rel => "stylesheet", :type => "text/css", :href => "https://assets.servus.io/2/font-awesome.css" }
+    %link{ :rel => "stylesheet", :type => "text/css", :href => "https://assets.servus.io/3/bootstrap.min.css" }
+    %link{ :rel => "stylesheet", :type => "text/css", :href => "https://assets.servus.io/3/servus.css" }
+    %link{ :rel => "stylesheet", :type => "text/css", :href => "https://assets.servus.io/3/font-awesome.css" }
     /[if IE 7 ]
-      %link{ :rel => "stylesheet", :type => "text/css", :href => "https://assets.servus.io/2/font-awesome-ie7.css" }
-    %link{ :rel => "stylesheet", :type => "text/css", :href => "https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:700" }
+      %link{ :rel => "stylesheet", :type => "text/css", :href => "https://assets.servus.io/3/font-awesome-ie7.css" }
+    %link{ :rel => "stylesheet", :type => "text/css", :href => "https://fonts.googleapis.com/css?family=Arimo:400,700&subset=latin,latin-ext,greek,greek-ext,vietnamese,cyrillic,cyrillic-ext" }
 
   %body
-    #main-content
-      #download
-        .row
-          #icon-column.five.columns.offset-by-one.hide-for-small
-            %p
-              {{#is_message}}
-              %i.icon-mail
-              {{/is_message}}
+    #main-content.container-fluid
+      .row-fluid
+        .span12
 
-              {{#is_contact}}
-              %i.icon-user
-              {{/is_contact}}
-
-              {{#is_archive}}
-              %i.icon-folder-close
-              {{/is_archive}}
-
-              {{#is_text}}
-              %i.icon-align-left
-              {{/is_text}}
-
-              {{#is_pdf}}
-              %i.icon-book
-              {{/is_pdf}}
-
-              {{#is_image}}
-              / %i.icon-picture
-              %img{ :src => "{{file_link}}", :title => "{{original_filename}}" }
-              {{/is_image}}
-
-              {{#is_video}}
-              %i.icon-film
-              {{/is_video}}
-
-              {{#is_audio}}
-              %i.icon-headphones
-              {{/is_audio}}
-
-              {{#is_unknown_type}}
-              %i.icon-paper-clip
-              {{/is_unknown_type}}
-
-          #file-column.five.columns.end
-            %p
+          #download-details.popover.top
+            .arrow
+            %h3.popover-title
               {{original_filename}}
+            .popover-content
+              %p.file-icon
+                {{#is_message}}
+                %i.icon-mail
+                {{/is_message}}
 
-        #download-row.row
-          .twelve.columns
-            %p
-              %a.secondary.button{ :href => "{{file_link}}" }
-                %i.icon-download
-                Download / Direct Link
-                %span.file-size
-                  \&middot; ({{file_size}})
+                {{#is_contact}}
+                %i.icon-user
+                {{/is_contact}}
 
-    #footer-bar
-      .row
-        .twelve.columns
-          %p
-            Powered by
-            %a{ :href => "https://servus.io/", :target => "_blank" }
-              Servus for Mac.
-            %br.show-for-small
-            %span
-              Turn any file on your computer into a branded download page hosted on Dropbox.
+                {{#is_archive}}
+                %i.icon-folder-close
+                {{/is_archive}}
+
+                {{#is_text}}
+                %i.icon-align-left
+                {{/is_text}}
+
+                {{#is_pdf}}
+                %i.icon-book
+                {{/is_pdf}}
+
+                {{#is_image}}
+                %img.img-rounded{ :src => "{{file_link}}", :title => "{{original_filename}}" }
+                {{/is_image}}
+
+                {{#is_video}}
+                %i.icon-film
+                {{/is_video}}
+
+                {{#is_audio}}
+                %i.icon-headphones
+                {{/is_audio}}
+
+                {{#is_unknown_type}}
+                %i.icon-paper-clip
+                {{/is_unknown_type}}
+
+              %p.file-size
+                {{file_size}}
+
+          %p#download-link
+            %a.btn.btn-success{ :href => "{{file_link}}" }
+              %i.icon-download
+              Download / Direct Link
+
+
+    #sharing.btn-group.dropup
+      %button.btn.dropdown-toggle{ :"data-toggle" => "dropdown", :title => "Share this page" }
+        %i.icon-share
+      %ul.dropdown-menu.pull-right
+        %li
+          %a.share-twitter{ :href => "#", :target => "_blank" }
+            %i.icon-twitter
+            Twitter
+        %li
+          %a.share-facebook{ :href => "#", :target => "_blank" }
+            %i.icon-facebook
+            Facebook
+        %li
+          %a.share-gplus{ :href => "#", :target => "_blank" }
+            %i.icon-google-plus
+            Google+
+
+
+    %script{ :src => "https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js" }
+    %script{ :src => "https://assets.servus.io/3/bootstrap.min.js" }
+    %script{ :src => "https://assets.servus.io/3/servus.js" }
+
+/
+  Generated by Servus for Mac.  https://servus.io/
+  Turn any file on your computer into a branded download page hosted on Dropbox.
+
+  Servus' default theme uses
+  \- Font Awesome by Dave Gandy - http://fortawesome.github.com/Font-Awesome

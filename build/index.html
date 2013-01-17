@@ -1,96 +1,115 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset='utf-8' />
-    <meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible' />
-    <meta content='text/html' http-equiv='Content-Type' />
-    <meta content='width=device-width' name='viewport' />
-    <title>{{original_filename}} (Shared with Servus for Mac.)</title>
-    <script type='text/javascript'>
-      //<![CDATA[
-        if ( top !== self ) { top.location = self.location.href; }
-      //]]>
-    </script>
-    <link href='https://assets.servus.io/2/foundation.css' rel='stylesheet' type='text/css' />
-    <link href='https://assets.servus.io/2/servus.css' rel='stylesheet' type='text/css' />
-    <link href='https://assets.servus.io/2/font-awesome.css' rel='stylesheet' type='text/css' />
-    <!--[if IE 7 ]>
-      <link href='https://assets.servus.io/2/font-awesome-ie7.css' rel='stylesheet' type='text/css' />
-    <![endif]-->
-    <link href='https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:700' rel='stylesheet' type='text/css' />
-  </head>
-  <body>
-    <div id='main-content'>
-      <div id='download'>
-        <div class='row'>
-          <div class='five columns offset-by-one hide-for-small' id='icon-column'>
-            <p>
-              {{#is_message}}
-              <i class='icon-mail'></i>
-              {{/is_message}}
-              {{#is_contact}}
-              <i class='icon-user'></i>
-              {{/is_contact}}
-              {{#is_archive}}
-              <i class='icon-folder-close'></i>
-              {{/is_archive}}
-              {{#is_text}}
-              <i class='icon-align-left'></i>
-              {{/is_text}}
-              {{#is_pdf}}
-              <i class='icon-book'></i>
-              {{/is_pdf}}
-              {{#is_image}}
-              <!-- %i.icon-picture -->
-              <img src='{{file_link}}' title='{{original_filename}}' />
-              {{/is_image}}
-              {{#is_video}}
-              <i class='icon-film'></i>
-              {{/is_video}}
-              {{#is_audio}}
-              <i class='icon-headphones'></i>
-              {{/is_audio}}
-              {{#is_unknown_type}}
-              <i class='icon-paper-clip'></i>
-              {{/is_unknown_type}}
-            </p>
-          </div>
-          <div class='five columns end' id='file-column'>
-            <p>
-              {{original_filename}}
-            </p>
-          </div>
-        </div>
-        <div class='row' id='download-row'>
-          <div class='twelve columns'>
-            <p>
-              <a class='secondary button' href='{{file_link}}'>
-                <i class='icon-download'></i>
-                Download / Direct Link
-                <span class='file-size'>
-                  &middot; ({{file_size}})
-                </span>
-              </a>
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div id='footer-bar'>
-      <div class='row'>
-        <div class='twelve columns'>
-          <p>
-            Powered by
-            <a href='https://servus.io/' target='_blank'>
-              Servus for Mac.
-            </a>
-            <br class='show-for-small' />
-            <span>
-              Turn any file on your computer into a branded download page hosted on Dropbox.
-            </span>
-          </p>
-        </div>
-      </div>
-    </div>
-  </body>
+<head>
+<meta charset="utf-8">
+<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+<meta content="text/html" http-equiv="Content-Type">
+<meta content="width=device-width" name="viewport">
+<title>{{original_filename}} (Shared with Servus for Mac.)</title>
+<script>
+  //<![CDATA[
+    if ( top !== self ) { top.location = self.location.href; }
+    var S = {
+      pageTitle: "",
+      pageLink: document.location.href,
+      fileLink: "{{file_link}}"
+    };
+  //]]>
+</script>
+<link href="https://assets.servus.io/3/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="https://assets.servus.io/3/servus.css" rel="stylesheet" type="text/css">
+<link href="https://assets.servus.io/3/font-awesome.css" rel="stylesheet" type="text/css">
+<!--[if IE 7 ]>
+<link href="https://assets.servus.io/3/font-awesome-ie7.css" rel="stylesheet" type="text/css">
+<![endif]-->
+<link href="https://fonts.googleapis.com/css?family=Arimo:400,700&amp;subset=latin,latin-ext,greek,greek-ext,vietnamese,cyrillic,cyrillic-ext" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="container-fluid" id="main-content">
+<div class="row-fluid">
+<div class="span12">
+<div class="popover top" id="download-details">
+<div class="arrow"></div>
+<h3 class="popover-title">
+{{original_filename}}
+</h3>
+<div class="popover-content">
+<p class="file-icon">
+{{#is_message}}
+<i class="icon-mail"></i>
+{{/is_message}}
+{{#is_contact}}
+<i class="icon-user"></i>
+{{/is_contact}}
+{{#is_archive}}
+<i class="icon-folder-close"></i>
+{{/is_archive}}
+{{#is_text}}
+<i class="icon-align-left"></i>
+{{/is_text}}
+{{#is_pdf}}
+<i class="icon-book"></i>
+{{/is_pdf}}
+{{#is_image}}
+<img class="img-rounded" src="{{file_link}}" title="{{original_filename}}">
+{{/is_image}}
+{{#is_video}}
+<i class="icon-film"></i>
+{{/is_video}}
+{{#is_audio}}
+<i class="icon-headphones"></i>
+{{/is_audio}}
+{{#is_unknown_type}}
+<i class="icon-paper-clip"></i>
+{{/is_unknown_type}}
+</p>
+<p class="file-size">
+{{file_size}}
+</p>
+</div>
+</div>
+<p id="download-link">
+<a class="btn btn-success" href="{{file_link}}">
+<i class="icon-download"></i>
+Download / Direct Link
+</a>
+</p>
+</div>
+</div>
+</div>
+<div class="btn-group dropup" id="sharing">
+<button class="btn dropdown-toggle" data-toggle="dropdown" title="Share this page">
+<i class="icon-share"></i>
+</button>
+<ul class="dropdown-menu pull-right">
+<li>
+<a class="share-twitter" href="#" target="_blank">
+<i class="icon-twitter"></i>
+Twitter
+</a>
+</li>
+<li>
+<a class="share-facebook" href="#" target="_blank">
+<i class="icon-facebook"></i>
+Facebook
+</a>
+</li>
+<li>
+<a class="share-gplus" href="#" target="_blank">
+<i class="icon-google-plus"></i>
+Google+
+</a>
+</li>
+</ul>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="https://assets.servus.io/3/bootstrap.min.js"></script>
+<script src="https://assets.servus.io/3/servus.js"></script>
+</body>
 </html>
+<!--
+Generated by Servus for Mac.  https://servus.io/
+Turn any file on your computer into a branded download page hosted on Dropbox.
+Servus' default theme uses
+- Font Awesome by Dave Gandy - http://fortawesome.github.com/Font-Awesome
+-->
