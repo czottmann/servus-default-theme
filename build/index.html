@@ -6,23 +6,18 @@
     <meta content="text/html" http-equiv="Content-Type">
     <meta content="width=device-width" name="viewport">
     <title>{{original_filename}} (Shared with Servus for Mac.)</title>
-    <script>
-      //<![CDATA[
-        if ( top !== self ) { top.location = self.location.href; }
-        var S = {
-          pageTitle: "",
-          pageLink: document.location.href,
-          fileLink: "{{file_link}}"
-        };
-      //]]>
-    </script>
-    <link href="//assets.servus.io/3/bootstrap.min.css?_=1358505055" rel="stylesheet" type="text/css">
-    <link href="//assets.servus.io/3/servus.css?_=1358505055" rel="stylesheet" type="text/css">
+    <link href="//assets.servus.io/3/bootstrap.min.css?_=1358509323" rel="stylesheet" type="text/css">
+    <link href="//assets.servus.io/3/servus.css?_=1358509323" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Arimo:400,700&amp;subset=latin,latin-ext,greek,greek-ext,vietnamese,cyrillic,cyrillic-ext" rel="stylesheet" type="text/css">
     <link href="//assets.servus.io/3/font-awesome.min.css" rel="stylesheet" type="text/css">
     <!--[if IE 7 ]>
       <link href="//assets.servus.io/3/font-awesome-ie7.min.css" rel="stylesheet" type="text/css">
     <![endif]-->
-    <link href="//fonts.googleapis.com/css?family=Arimo:400,700&amp;subset=latin,latin-ext,greek,greek-ext,vietnamese,cyrillic,cyrillic-ext" rel="stylesheet" type="text/css">
+    <script>
+      //<![CDATA[
+        var S = { pageTitle: "", pageLink: document.location.href, fileLink: "{{file_link}}" };
+      //]]>
+    </script>
   </head>
   <body>
     <div class="container-fluid" id="main-content">
@@ -36,7 +31,9 @@
             <div class="popover-content">
               <p class="file-icon">
                 {{#is_image}}
-                <img class="img-rounded" src="{{file_link}}" title="{{original_filename}}">
+                <a href="{{file_link}}">
+                  <img class="img-rounded" src="{{file_link}}" title="{{original_filename}}">
+                </a>
                 {{/is_image}}
                 {{#is_message}}
                 <i class="icon-mail"></i>
@@ -109,8 +106,8 @@
       </div>
     </div>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-    <script src="//assets.servus.io/3/bootstrap.min.js?_=1358505055"></script>
-    <script src="//assets.servus.io/3/servus.js?_=1358505055"></script>
+    <script src="//assets.servus.io/3/bootstrap.min.js?_=1358509323"></script>
+    <script src="//assets.servus.io/3/servus.js?_=1358509323"></script>
   </body>
 </html>
 <!--

@@ -11,20 +11,15 @@
 
     %title {{original_filename}} (Shared with Servus for Mac.)
 
-    :javascript
-      if ( top !== self ) { top.location = self.location.href; }
-      var S = {
-        pageTitle: "",
-        pageLink: document.location.href,
-        fileLink: "{{file_link}}"
-      };
-
     %link{ :rel => "stylesheet", :type => "text/css", :href => "//assets.servus.io/3/bootstrap.min.css#{cache_buster}" }
     %link{ :rel => "stylesheet", :type => "text/css", :href => "//assets.servus.io/3/servus.css#{cache_buster}" }
+    %link{ :rel => "stylesheet", :type => "text/css", :href => "//fonts.googleapis.com/css?family=Arimo:400,700&subset=latin,latin-ext,greek,greek-ext,vietnamese,cyrillic,cyrillic-ext" }
     %link{ :rel => "stylesheet", :type => "text/css", :href => "//assets.servus.io/3/font-awesome.min.css" }
     /[if IE 7 ]
       %link{ :rel => "stylesheet", :type => "text/css", :href => "//assets.servus.io/3/font-awesome-ie7.min.css" }
-    %link{ :rel => "stylesheet", :type => "text/css", :href => "//fonts.googleapis.com/css?family=Arimo:400,700&subset=latin,latin-ext,greek,greek-ext,vietnamese,cyrillic,cyrillic-ext" }
+
+    :javascript
+      var S = { pageTitle: "", pageLink: document.location.href, fileLink: "{{file_link}}" };
 
   %body
     #main-content.container-fluid
@@ -39,7 +34,8 @@
             .popover-content
               %p.file-icon
                 {{#is_image}}
-                %img.img-rounded{ :src => "{{file_link}}", :title => "{{original_filename}}" }
+                %a{ :href => "{{file_link}}" }
+                  %img.img-rounded{ :src => "{{file_link}}", :title => "{{original_filename}}" }
                 {{/is_image}}
 
                 {{#is_message}}
