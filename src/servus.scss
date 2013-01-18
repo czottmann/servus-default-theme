@@ -14,7 +14,7 @@ body {
   font-family: Arimo, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-#main-content {
+#shared-file {
   @include transition( padding-top 0.3s );
   text-align: center;
 }
@@ -70,9 +70,9 @@ body {
   right: 20px;
 
   .powered-by {
-    @include transition( opacity 0.3s linear 0.3s);
+    @include transition( opacity 0.3s ease 0.3s);
     margin-right: 10px;
-    opacity: 0.0;
+    opacity: 0;
     text-shadow: 1px 1px 2px #fff;
   }
 
@@ -86,12 +86,20 @@ body {
 
   &:hover {
     .powered-by {
-      @include transition( opacity 0.3s linear 0.3s);
+      @include transition( opacity 0.3s ease 0.3s);
       opacity: 0.5;
     }
   }
 }
 
+
+@media (max-width: 640px) {
+  #download-details {
+    &.type-image {
+      max-width: 300px;
+    }
+  }
+}
 
 @media (max-width: 320px) {
   #download-details {

@@ -1,23 +1,24 @@
+var S = window.S || {};
+
+S.onResize = function(evt) {
+  $("#main-content").css(
+    "padding-top",
+    Math.floor( ( $(window).height() - $("#shared-file").height() ) / 2 )
+  );
+};
+
 $(window)
-  .on( "resize", function() {
-    var $main = $("#main-content"),
-      mainTop = Math.floor( ( $(window).height() - $main.height() ) / 2 );
-
-    $main.css( "padding-top", mainTop );
-  })
-  .trigger("resize");
-
-// Reset the details box position when the file is image and it has finished
-// loading.  Also, mark the box as containing an image.
-$("#download-details").filter(":has(.img-rounded)")
-  .addClass("type-image")
-  .find(".img-rounded").on( "load", function() {
-    $(window).trigger("resize");
-  });
-
+  .on( "resize", S.onResize )
+  .on( "load", S.onResize );
 
 $(document).ready( function() {
   S.pageTitle = $.trim( $(".popover-title").text() );
+
+  // Reset the details box position when the file is image and it has finished
+  // loading.  Also, mark the box as containing an image.
+  $("#download-details").filter(":has(.img-rounded)")
+    .addClass("type-image")
+    .find(".img-rounded").on( "load", S.onResize );
 
   // Generate Twitter sharing link and attach click handler
   $(".share-twitter")
