@@ -1,4 +1,4 @@
-# Servus: Default Theme v1.1
+# Servus: Default Theme v1.3
 
 [Servus][servus] is a Mac app to make quick-fire sharing via your [Dropbox account][dropbox] easier and more comfortable.  Its preferences allow you to specify a custom theme for rendering your shared files' preview pages.
 
@@ -72,7 +72,7 @@ For the time being, my "master files" are the HAML/SASS source files residing in
 
 ## Legal
 
-The Servus Default Theme are copyright © 2012 Carlo Zottmann, [municode.de](http://municode.de/), carlo@municode.de.
+The Servus Default Theme is copyright © 2012-2013 Carlo Zottmann, [municode.de](http://municode.de/), carlo@municode.de.
 
 3rd party libraries and code (listed below) expressively excluded, the Servus Default Theme (this here repository) is licensed under the WTFPL v2.
 
@@ -96,34 +96,35 @@ The Servus Default Theme are copyright © 2012 Carlo Zottmann, [municode.de](htt
 Servus default theme is using the rather nice glyphs of [Font Awesome][font-awesome].  Copyright (C) 2012 by Dave Gandy, released under a [CC BY 3.0][license-cc-by-30] license.
 
 
-### Font: Yanone Kaffeesatz
+### Font: Arimo
 
-Servus main display font is [Yanone Kaffeesatz][kaffeesatz], released under the [SIL Open Font License v1.1][license-sil].
-
-
-### Basic CSS: ZURB Foundation 3.0
-
-The basic CSS structure is [ZURB Foundation 3.0][zurb-foundation], release under the MIT Open Source License.
+Servus main display font is [Arimo][arimo], released under the [SIL Open Font License v1.1][license-sil].
 
 
-### Background: Clean Gray Paper
+### Basic CSS: Bootstrap by Twitter
 
-The default theme's background image is [Clean Gray Paper][clean-gray-paper] by [Subtle Patterns][subtle-patterns], released under a [CC BY 3.0][license-cc-by-30] license.
+The basic CSS structure is [Bootstrap by Twitter][bootstrap], release under the Apache License v2.0.
+
+
+### Background: Debut Light
+
+The default theme's background image is [Debut Light][debut-light] by [Subtle Patterns][subtle-patterns], released under a [CC BY 3.0][license-cc-by-30] license.
 
 
 
+[arimo]: http://www.google.com/webfonts/specimen/Arimo
 [assets]: https://github.com/carlo/servus-default-theme/tree/master/assets
 [boilerplate-github]: https://github.com/carlo/servus-theme-boilerplate
+[bootstrap]: http://twitter.github.com/bootstrap/
+[debut-light]: http://subtlepatterns.com/debut-light/
 [dropbox]: http://db.tt/T84kkEv
-[servus]: http://servus.io
 [font-awesome]: http://fortawesome.github.com/Font-Awesome/
 [heroku]: http://heroku.com
 [index-html]: https://github.com/carlo/servus-default-theme/blob/master/build/index.html
-[kaffeesatz]: http://www.google.com/webfonts/specimen/Yanone+Kaffeesatz
+[jquery]: http://jquery.com/
 [license-cc-by-30]: http://creativecommons.org/licenses/by/3.0/
 [license-sil]: http://scripts.sil.org/OFL
 [livereload]: http://livereload.com/
 [mustache]: http://mustache.github.com/
-[zurb-foundation]: https://github.com/zurb/foundation
+[servus]: http://servus.io
 [subtle-patterns]: http://subtlepatterns.com/
-[clean-gray-paper]: http://subtlepatterns.com/clean-gray-paper/
