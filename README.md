@@ -15,7 +15,7 @@ If you're only interested in seeing the themeing example serving as the default 
 
 For starters, here's a screenshot of the default theme in action.
 
-![Screenshot of Servus default theme (v1.0)](https://github.com/carlo/servus-default-theme/raw/master/screenshot-v1.0.jpg)
+![Screenshot of Servus default theme (v1.3)](https://github.com/carlo/servus-default-theme/raw/master/screenshot-v1.3.jpg)
 
 
 ## Templating Engine
