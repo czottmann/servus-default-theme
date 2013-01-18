@@ -35,8 +35,13 @@
             .arrow
             %h3.popover-title
               {{original_filename}}
+
             .popover-content
               %p.file-icon
+                {{#is_image}}
+                %img.img-rounded{ :src => "{{file_link}}", :title => "{{original_filename}}" }
+                {{/is_image}}
+
                 {{#is_message}}
                 %i.icon-mail
                 {{/is_message}}
@@ -56,10 +61,6 @@
                 {{#is_pdf}}
                 %i.icon-book
                 {{/is_pdf}}
-
-                {{#is_image}}
-                %img.img-rounded{ :src => "{{file_link}}", :title => "{{original_filename}}" }
-                {{/is_image}}
 
                 {{#is_video}}
                 %i.icon-film

@@ -7,13 +7,17 @@ $(window)
   })
   .trigger("resize");
 
-$(".popover-content p.file-icon img").on( "load", function() {
-  $(window).trigger("resize");
-});
+// Reset the details box position when the file is image and it has finished
+// loading.  Also, mark the box as containing an image.
+$("#download-details").filter(":has(.img-rounded)")
+  .addClass("type-image")
+  .find(".img-rounded").on( "load", function() {
+    $(window).trigger("resize");
+  });
 
 
 $(document).ready( function() {
-  S.pageTitle = $(".popover-title").text();
+  S.pageTitle = $.trim( $(".popover-title").text() );
 
   // Generate Twitter sharing link and attach click handler
   $(".share-twitter")
@@ -26,11 +30,7 @@ $(document).ready( function() {
     )
     .on( "click", function(evt) {
       evt.preventDefault();
-      window.open(
-        this.href,
-        "Share to Twitter",
-        "toolbar=0,status=0,resizable=1,width=550,height=420"
-      );
+      window.open( this.href, "Share to Twitter", "toolbar=0,status=0,resizable=1,width=550,height=420" );
     });
 
   // Generate Facebook sharing link and attach click handler
@@ -42,11 +42,7 @@ $(document).ready( function() {
     )
     .on( "click", function(evt) {
       evt.preventDefault();
-      window.open(
-        this.href,
-        "Share to Facebook",
-        "toolbar=0,status=0,resizable=1,width=626,height=436"
-      );
+      window.open( this.href, "Share to Facebook", "toolbar=0,status=0,resizable=1,width=626,height=436" );
     });
 
   // Generate Google+ sharing link and attach click handler
@@ -54,10 +50,6 @@ $(document).ready( function() {
     .attr( "href", "https://plus.google.com/share?url=" + encodeURIComponent(document.location.href) )
     .on( "click", function(evt) {
       evt.preventDefault();
-      window.open(
-        this.href,
-        "Share to Google+",
-        "width=600,height=460,menubar=no,location=no,status=no"
-      );
+      window.open( this.href, "Share to Google+", "width=600,height=460,menubar=no,location=no,status=no" );
     });
 });

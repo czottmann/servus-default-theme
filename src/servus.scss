@@ -20,11 +20,17 @@ body {
 }
 
 #download-details {
-  display: inline-block;
+  display: block;
+  margin: 0 auto;
   position: relative;
   text-align: center;
   width: 350px;
   z-index: auto;
+
+  &.type-image {
+    max-width: 50%;
+    width: auto;
+  }
 
   .popover-title {
     font-size: 18px;
@@ -93,13 +99,9 @@ body {
   #download-details {
     width: 236px;
 
-    .popover-content {
-      p.file-icon {
-        img {
-          max-height: 208px;
-          max-width: 208px;
-        }
-      }
+    &.type-image {
+      max-width: auto;
+      width: 236px;
     }
   }
 }
