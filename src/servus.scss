@@ -14,8 +14,7 @@ body {
   font-family: Arimo, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-#shared-file {
-  @include transition( padding-top 0.3s );
+#main-content {
   text-align: center;
 }
 
@@ -28,7 +27,7 @@ body {
   z-index: auto;
 
   &.type-image {
-    max-width: 50%;
+    max-width: 75%;
     width: auto;
   }
 
@@ -50,45 +49,47 @@ body {
 
       img {
         margin-top: 10px;
+        max-height: 300px;
       }
-    }
-
-    p.file-size {
-      color: #999999;
     }
   }
 }
 
 #download-link {
   margin: 5px;
+  white-space: nowrap;
+
+  span.file-size {
+    font-size: 85%;
+    opacity: 0.65;
+  }
+
+  #sharing {
+    button {
+      padding: 5px 12px;
+    }
+
+    .dropdown-menu {
+      min-width: 110px;
+      text-align: left;
+
+      li>a {
+        padding: 3px 10px;
+      }
+    }
+  }
 }
 
-#sharing {
-  bottom: 20px;
-  padding-top: 5px;
-  position: fixed;
-  right: 20px;
+#shared-by {
+  @include transition( opacity 0.3s ease 1.5s );
+  margin: 10px 0 -10px 0;
+  opacity: 0;
+  text-shadow: 1px 1px 2px #fff;
+  visibility: hidden;
 
-  .powered-by {
-    @include transition( opacity 0.3s ease 0.3s);
-    margin-right: 10px;
-    opacity: 0;
-    text-shadow: 1px 1px 2px #fff;
-  }
-
-  .dropdown-menu {
-    min-width: 110px;
-
-    li>a {
-      padding: 3px 10px;
-    }
-  }
-
-  &:hover {
-    .powered-by {
-      @include transition( opacity 0.3s ease 0.3s);
-      opacity: 0.5;
-    }
+  &.s-visible {
+    @include transition( opacity 0.3s ease 0.2s );
+    opacity: 0.5;
   }
 }
 
@@ -98,16 +99,28 @@ body {
     &.type-image {
       max-width: 300px;
     }
+
+    .popover-title {
+      font-size: inherit;
+      line-height: inherit;
+      padding: 4px 14px;
+    }
   }
 }
 
 @media (max-width: 320px) {
   #download-details {
-    width: 236px;
+    width: inherit;
 
     &.type-image {
       max-width: auto;
-      width: 236px;
+      width: inherit;
     }
+  }
+}
+
+@media (max-height: 320px) {
+  #shared-by {
+    display: none;
   }
 }

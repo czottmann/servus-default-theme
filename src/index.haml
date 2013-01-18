@@ -70,35 +70,34 @@
                 %i.icon-paper-clip
                 {{/is_unknown_type}}
 
-              %p.file-size
-                {{file_size}}
-
-          %p#download-link
+          #download-link
             %a.btn.btn-success{ :href => "{{file_link}}" }
               %i.icon-download
               Download / Direct Link
+              %span.file-size
+                &middot; {{file_size}}
 
 
-    #sharing
-      %span.powered-by
-        Shared using
-        %a{ :href => "https://servus.io/" } Servus for Mac.
-      .btn-group.dropup
-        %button.btn.dropdown-toggle{ :"data-toggle" => "dropdown", :title => "Share this page" }
-          %i.icon-share
-        %ul.dropdown-menu.pull-right
-          %li
-            %a.share-twitter{ :href => "#", :target => "_blank" }
-              %i.icon-twitter
-              Twitter
-          %li
-            %a.share-facebook{ :href => "#", :target => "_blank" }
-              %i.icon-facebook
-              Facebook
-          %li
-            %a.share-gplus{ :href => "#", :target => "_blank" }
-              %i.icon-google-plus
-              Google+
+            #sharing.btn-group.dropup
+              %button.btn.dropdown-toggle{ :"data-toggle" => "dropdown", :title => "Share this page" }
+                %i.icon-share
+              %ul.dropdown-menu.pull-right
+                %li
+                  %a.share-twitter{ :href => "#", :target => "_blank" }
+                    %i.icon-twitter
+                    Twitter
+                %li
+                  %a.share-facebook{ :href => "#", :target => "_blank" }
+                    %i.icon-facebook
+                    Facebook
+                %li
+                  %a.share-gplus{ :href => "#", :target => "_blank" }
+                    %i.icon-google-plus
+                    Google+
+
+          #shared-by
+            Shared using
+            %a{ :href => "https://servus.io/" } Servus for Mac.
 
 
     %script{ :src => "//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js" }
