@@ -1,5 +1,5 @@
 /*jshint asi: false, bitwise: false, boss: false, browser: true,
-  camelcase: true, curly: true, debug: false, devel: true, eqeqeq: true,
+  camelcase: false, curly: true, debug: false, devel: true, eqeqeq: true,
   eqnull: false, evil: false, forin: false, immed: true, indent: 4,
   laxbreak: true, newcap: true, noarg: true, noempty: false, nomen: false,
   nonew: false, onevar: false, passfail: false, plusplus: false,
@@ -33,7 +33,10 @@ $(window)
 
 
 $(document).ready( function() {
-  S.pageTitle = $.trim( $(".popover-title").text() );
+  var d = S.details,
+    shareTitle = encodeURIComponent( $.trim(d.original_filename) ),
+    shareLink = encodeURIComponent(document.location.href);
+
   S.nominalHeightBox = $("#shared-file").height() - $("#download-details .img-rounded").height();
   S.onResize();
 
@@ -57,8 +60,8 @@ $(document).ready( function() {
   $(".share-twitter")
     .attr( "href", [
         "https://twitter.com/intent/tweet?original_referer=",
-        "text=" + encodeURIComponent(S.pageTitle),
-        "url=" + encodeURIComponent(S.pageLink),
+        "text=" + shareTitle,
+        "url=" + shareLink,
         "via=servusio"
       ].join("&")
     )
@@ -70,8 +73,8 @@ $(document).ready( function() {
   // Generate Facebook sharing link and attach click handler
   $(".share-facebook")
     .attr( "href", [
-        "https://www.facebook.com/sharer/sharer.php?src=bm&v=4&i=1358444826&u=" + encodeURIComponent(S.pageLink),
-        "name=" + encodeURIComponent(S.pageTitle)
+        "https://www.facebook.com/sharer/sharer.php?src=bm&v=4&i=1358444826&u=" + shareLink,
+        "name=" + shareTitle
       ].join("&")
     )
     .on( "click", function(evt) {
@@ -81,7 +84,7 @@ $(document).ready( function() {
 
   // Generate Google+ sharing link and attach click handler
   $(".share-gplus")
-    .attr( "href", "https://plus.google.com/share?url=" + encodeURIComponent(document.location.href) )
+    .attr( "href", "https://plus.google.com/share?url=" + shareLink )
     .on( "click", function(evt) {
       evt.preventDefault();
       window.open( this.href, "Share to Google+", "width=600,height=460,menubar=no,location=no,status=no" );

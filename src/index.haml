@@ -19,7 +19,7 @@
       %link{ :rel => "stylesheet", :type => "text/css", :href => "//assets.servus.io/3/font-awesome-ie7.min.css" }
 
     :javascript
-      var S = { pageTitle: "", pageLink: document.location.href, fileLink: "{{file_link}}" };
+      var S = { "details": {{&json_data}} };
 
   %body
     .container-fluid
