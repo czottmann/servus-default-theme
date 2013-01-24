@@ -18,51 +18,10 @@ For starters, here's a screenshot of the default theme in action.
 ![Screenshot of Servus default theme (v1.3)](https://github.com/carlo/servus-default-theme/raw/master/screenshot-v1.3.jpg)
 
 
-## Templating Engine
+## Documentation
 
-Servus is making use of [Mustache][mustache], a well-known logic-less templating engine.  You can find all you need to know about its syntax on the [Mustache website][mustache].
-
-
-## Theme Workflow
-
-The templating process goes like this:
-
-  1. All non-`.html` files will be copied verbatim to the target folder (`~/Dropbox/Public/share/YYYY-MM/…/`).
-  2. All `.html` will be run through the templating engine, the resulting files will be written to the target folder (using their original names, i.e. an `index.html` with placeholders in your theme folder will result in an `index.html` filled with live data in the target folder).
-  3. The shared file will be copied to a `f` subfolder in the target directory; its name will be normalized a bit.
-  
-A few notes:
-
-  - Your theme **must** contain an `index.html`.
-  - Servus will ignore subfolders.  Only files in the root folder of your theme are recognized.
-  - The default theme only contains one HTML and no JS file.  There's no reason why your theme can't sport more than one HTML file and/or JS files.  The templating engine won't replace keys in JS files, tho, so if you want to set JS variables, do so in a `<script>` block in the HTML file prior to loading your external JS file.
- 
-   
-
-## Template Placeholders
-
-Here's a list of available template keys/variables with their meaning.
-
-  - `file_link`: the relative path to the shared file as seen from
-    `index.html`.
-  - `file_ext`: the normalized file extension (trimmed & lowercase).
-  - `file_size`: the file size in readable format, eg. "2.70 KB", 
-    "5.12 GB".
-  - `short_url`: the servus.io URL leading to the preview page.
-  - `original_filename`: The name of the file as it was when the file was
-    shared.
-  - `is_archive`: the file is an archive (zip, tgz, rar etc.)
-  - `is_audio`: the file is an audio file (mp3, m4a, wav etc.)
-  - `is_contact`: the file is a vcard file
-  - `is_image`: the file is an image (png, jpg, tiff, gif etc.)
-  - `is_message`: the file is a recognized message (email, IM, and so on)
-  - `is_pdf`: the file is a mixed content file, i.e. a PDF.
-  - `is_text`: the file is text document (html, rtf, mdown etc.)
-  - `is_video`: the file is a video (mov, mpg etc.)
-  - `is_unknown_type`: the file wasn't recognized as one of the files 
-    listed above
-  - `is_ext_*`: a "dynamic" placeholder — for example, if the shared file
-    is a GIF then the placeholder `is_ext_gif` would be set.
+To learn more about Servus' templating process and what you can do 
+with it, see [the documentation](http://documentup.com/carlo/servus-theme-boilerplate).
 
 
 ## Build Notes
