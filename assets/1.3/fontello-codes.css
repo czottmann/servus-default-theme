@@ -1,0 +1,6 @@
+
+.icon-gplus:before { content: '\2b'; } /* '+' */
+.icon-twitter:before { content: '\54'; } /* 'T' */
+.icon-facebook:before { content: '\66'; } /* 'f' */
+.icon-appnet:before { content: '\e1'; } /* 'á' */
+.icon-export:before { content: '\e715'; } /* '' */

@@ -33,42 +33,8 @@
 
             .popover-content
               %p.file-icon
-                {{#is_image}}
                 %a{ :href => "{{file_link}}" }
                   %img.img-rounded{ :src => "{{file_link}}", :title => "{{original_filename}}" }
-                {{/is_image}}
-
-                {{#is_message}}
-                %i.icon-mail
-                {{/is_message}}
-
-                {{#is_contact}}
-                %i.icon-user
-                {{/is_contact}}
-
-                {{#is_archive}}
-                %i.icon-folder-close
-                {{/is_archive}}
-
-                {{#is_text}}
-                %i.icon-align-left
-                {{/is_text}}
-
-                {{#is_pdf}}
-                %i.icon-book
-                {{/is_pdf}}
-
-                {{#is_video}}
-                %i.icon-film
-                {{/is_video}}
-
-                {{#is_audio}}
-                %i.icon-headphones
-                {{/is_audio}}
-
-                {{#is_unknown_type}}
-                %i.icon-paper-clip
-                {{/is_unknown_type}}
 
           #download-link
             %a.btn.btn-success{ :href => "{{file_link}}" }
