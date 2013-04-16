@@ -65,7 +65,7 @@ $(document).ready( function() {
     )
     .on( "click", function(evt) {
       evt.preventDefault();
-      window.open( this.href, "Share to App.net", "toolbar=0,status=0,resizable=1,width=550,height=420" );
+      window.open( this.href, "Share to App.net", "toolbar=0,status=0,resizable=1,width=750,height=420" );
     });
 
   // Generate Twitter sharing link and attach click handler
@@ -79,7 +79,7 @@ $(document).ready( function() {
     )
     .on( "click", function(evt) {
       evt.preventDefault();
-      window.open( this.href, "Share to Twitter", "toolbar=0,status=0,resizable=1,width=550,height=420" );
+      window.open( this.href, "Share to Twitter", "toolbar=0,status=0,resizable=1,width=550,height=450" );
     });
 
   // Generate Facebook sharing link and attach click handler
