@@ -15,9 +15,10 @@ body {
 #download-details {
   display: block;
   margin: 0 auto;
+  max-width: 540px;
   position: relative;
   text-align: center;
-  width: 350px;
+  width: inherit;
   z-index: auto;
 }
 #download-details .popover-title {
