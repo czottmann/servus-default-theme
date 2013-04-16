@@ -56,9 +56,7 @@ $(document).ready( function() {
       $("#shared-by").removeClass("s-visible");
     });
 
-  //
-
-  // Generate Twitter sharing link and attach click handler
+  // Generate ADN sharing link and attach click handler
   $(".share-appnet")
     .attr( "href", [
         "https://alpha.app.net/intent/post/?",

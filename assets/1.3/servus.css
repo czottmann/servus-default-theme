@@ -13,12 +13,11 @@ body {
 }
 
 #download-details {
-  display: block;
+  display: inline-block;
   margin: 0 auto;
-  max-width: 540px;
   position: relative;
   text-align: center;
-  width: inherit;
+  width: auto;
   z-index: auto;
 }
 #download-details .popover-title {
@@ -28,8 +27,9 @@ body {
   word-wrap: break-word;
 }
 #download-details .popover-content p.preview-image img {
+  height: inherit;
   margin-top: 10px;
-  max-height: 300px;
+  width: inherit;
 }
 
 #download-link {
@@ -68,9 +68,6 @@ body {
 }
 
 @media (max-width: 640px) {
-  #download-details.type-image {
-    max-width: 300px;
-  }
   #download-details .popover-title {
     font-size: inherit;
     line-height: inherit;

@@ -10,8 +10,8 @@ html, body {
 
 body {
   background-color: #f4f4ff;
-  background: url(https://assets.servus.io/3/debut_light.png);
-  font-family: Arimo, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background: url(https://assets.servus.io/1.3/debut_light.png);
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 #main-content {
@@ -19,17 +19,12 @@ body {
 }
 
 #download-details {
-  display: block;
+  display: inline-block;
   margin: 0 auto;
   position: relative;
   text-align: center;
-  width: 350px;
+  width: auto;
   z-index: auto;
-
-  &.type-image {
-    max-width: 75%;
-    width: auto;
-  }
 
   .popover-title {
     font-size: 18px;
@@ -39,17 +34,11 @@ body {
   }
 
   .popover-content {
-    p.file-icon {
-      i {
-        display: block;
-        font-size: 200px;
-        height: 180px;
-        line-height: 200px;
-      }
-
+    p.preview-image {
       img {
+        height: inherit;
         margin-top: 10px;
-        max-height: 300px;
+        width: inherit;
       }
     }
   }
@@ -96,10 +85,6 @@ body {
 
 @media (max-width: 640px) {
   #download-details {
-    &.type-image {
-      max-width: 300px;
-    }
-
     .popover-title {
       font-size: inherit;
       line-height: inherit;
@@ -112,7 +97,7 @@ body {
   #download-details {
     width: inherit;
 
-    &.type-image {
+    &.preview-image {
       max-width: auto;
       width: inherit;
     }
