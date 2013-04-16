@@ -1,6 +1,6 @@
 /*jshint asi: false, bitwise: false, boss: false, browser: true,
   camelcase: false, curly: true, debug: false, devel: true, eqeqeq: true,
-  eqnull: false, evil: false, forin: false, immed: true, indent: 4,
+  eqnull: false, evil: false, forin: false, immed: true, indent: 2,
   laxbreak: true, newcap: true, noarg: true, noempty: false, nomen: false,
   nonew: false, onevar: false, passfail: false, plusplus: false,
   quotmark: 'double', regexp: false, shadow: false, strict: false, sub: true,
@@ -54,6 +54,20 @@ $(document).ready( function() {
     })
     .on( "mouseleave", function() {
       $("#shared-by").removeClass("s-visible");
+    });
+
+  //
+
+  // Generate Twitter sharing link and attach click handler
+  $(".share-appnet")
+    .attr( "href", [
+        "https://alpha.app.net/intent/post/?",
+        "text=" + shareTitle + " " + shareLink
+      ].join("&")
+    )
+    .on( "click", function(evt) {
+      evt.preventDefault();
+      window.open( this.href, "Share to App.net", "toolbar=0,status=0,resizable=1,width=550,height=420" );
     });
 
   // Generate Twitter sharing link and attach click handler
