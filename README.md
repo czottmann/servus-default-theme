@@ -20,8 +20,8 @@ For starters, here's a screenshot of the default theme in action.
 
 ## Documentation
 
-To learn more about Servus' templating process and what you can do 
-with it, see [the documentation](http://documentup.com/carlo/servus-theme-boilerplate).
+To learn more about Servus' templating process and what you can do with it,
+see [the documentation](https://servus.io/theme-docs.html).
 
 
 ## Build Notes
@@ -38,8 +38,6 @@ The Servus Default Theme is copyright © 2012-2013 Carlo Zottmann, [municode.de]
                DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
                        Version 2, December 2004
     
-    Copyright (C) 2004 Sam Hocevar
-     14 rue de Plaisance, 75014 Paris, France
     Everyone is permitted to copy and distribute verbatim or modified
     copies of this license document, and changing it is allowed as long
     as the name is changed.
